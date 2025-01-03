@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main-page-vis-style.css">
+    <link rel="stylesheet" href="css/menu-button.css">
     <link rel="stylesheet" href="css/general-style-button.css">
     <link rel="stylesheet" href="css/text-box.css">
     <link rel="stylesheet" href="css/social-media.css">
@@ -38,6 +40,12 @@
             <button>
                 <span>Contact</span>
             </button>
+            <label class="burger" for="burger">
+                <input type="checkbox" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
         </div>
     </header>
 
@@ -74,15 +82,32 @@
     </div>
 
     <!-- Social Media Icon Buttons -->
-    <div id="social-media"></div>
-    <script>
-        fetch('HTML/social-media.HTML')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('social-media').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading social media:', error));
-    </script>
+    <ul class="wrapper">
+        <li class="icon facebook">
+            <span class="tooltip">Facebook</span>
+            <a href="https://www.facebook.com/profile.php?id=100005696492155" target="_blank">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+        </li>
+        <li class="icon instagram">
+            <span class="tooltip">Instagram</span>
+            <a href="https://www.instagram.com/john_ling_chen/" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </li>
+        <li class="icon github">
+            <span class="tooltip">GitHub</span>
+            <a href="https://github.com/JCpennyChen" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </li>
+        <li class="icon linkedin">
+            <span class="tooltip">LinkedIn</span>
+            <a href="https://www.linkedin.com/in/john-chen-365950233" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </li>
+    </ul>
 </body>
 
 </html>

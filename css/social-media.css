@@ -5,7 +5,7 @@
     width: 100%;
     padding-top: 40px;
     font-family: "Poppins", sans-serif;
-    justify-content: center;
+    justify-content: center; 
 }
 
 .wrapper .icon {
@@ -15,7 +15,7 @@
     margin: 10px;
     width: 50px;
     height: 50px;
-    font-size: 18px;
+    font-size: 32px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,6 +23,17 @@
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent */
+    display: flex; /* Make <a> act like the parent <div> */
+    justify-content: center; /* Center content */
+    align-items: center; /* Center content */
+    width: 100%; /* Match parent width */
+    height: 100%; /* Match parent height */
+    border-radius: 50%; /* Ensure it stays circular */
 }
 
 .wrapper .tooltip {
