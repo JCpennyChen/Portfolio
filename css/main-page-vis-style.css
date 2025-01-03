@@ -1,0 +1,104 @@
+body {
+    background-color: rgb(255, 255, 237);
+    font-family: 'Dongle', sans-serif;
+}
+
+h1 {
+    font-family: 'Dongle', sans-serif;
+    font-weight: bold;
+}
+
+p {
+    font-family: 'Dongle', sans-serif;
+    font-weight: 300;
+}
+
+.top-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: rgb(255, 255, 237);
+    padding: 10px 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Top Left Profile Image */
+.flip-container {
+    perspective: 1000px;
+}
+
+.front-profile-image,
+.back-profile-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-flip-container {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease-in-out;
+}
+
+.profile-flip-container:hover {
+    transform: rotateY(180deg);
+}
+
+.front-profile-image img,
+.back-profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.back-profile-image {
+    transform: rotateY(180deg);
+}
+
+.typewriter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Type Writers */
+.typewriter h1 {
+    color: #fb6900;
+    font-family: monospace;
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+
+    animation:
+        typing 3.5s steps(30, end),
+        blink-caret .5s step-end infinite;
+}
+
+/* Message Box Styling */
+.message-box {
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 800px;
+}
+
+.message-box h2 {
+    font-size: 64px; 
+    color: #fb6900;
+    margin-bottom: 10px;
+}
+
+.message-box p {
+    font-size: 32px;
+    color: #fb8d3e;
+    margin: 0; 
+}

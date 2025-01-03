@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main-page-vis-style.css">
+    <link rel="stylesheet" href="css/general-style-button.css">
+    <link rel="stylesheet" href="css/text-box.css">
+    <link rel="stylesheet" href="css/social-media.css">
+</head>
+
+<body>
+    <!-- Top Header Section -->
+    <header class="top-header">
+        <!-- Top Left Corner Profile Image Section -->
+        <div class="flip-container">
+            <div class="profile-flip-container">
+                <div class="front-profile-image">
+                    <img src="photos/Profile-Image.png" alt="Front Profile Image">
+                </div>
+                <div class="back-profile-image">
+                    <img src="photos/JC.png" alt="Back Profile Image">
+                </div>
+            </div>
+        </div>
+        <!-- Section Buttons -->
+        <div class="buttons-container">
+            <button>
+                <span>About</span>
+            </button>
+            <button>
+                <span>Experience</span>
+            </button>
+            <button>
+                <span>Projects</span>
+            </button>
+            <button>
+                <span>Contact</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Type Writer Sections -->
+    <div class="typewriter">
+        <h1>Hi. My Name is John Chen</h1>
+    </div>
+
+    <!-- Message Box -->
+    <div class="message-box">
+        <h2>Send me a message!</h2>
+        <p>Got a question or proposal, or just want to say hello? Go ahead.</p>
+    </div>
+
+    <!-- Contact Me Text Boxes -->
+    <div class="top-contact-section-container">
+        <div class="input-container">
+            <input type="text" id="name-input" required="">
+            <label for="name-input" class="label">Your Name</label>
+            <div class="underline"></div>
+        </div>
+        <div class="input-container">
+            <input type="text" id="email-input" required="">
+            <label for="email-input" class="label">Email Address</label>
+            <div class="underline"></div>
+        </div>
+    </div>
+    <div class="bottom-contact-section-container">
+        <div class="input-container">
+            <input type="text" id="message-input" required="">
+            <label for="message-input" class="label">Your Messages!</label>
+            <div class="underline"></div>
+        </div>
+    </div>
+
+    <!-- Social Media Icon Buttons -->
+    <div id="social-media"></div>
+    <script>
+        fetch('HTML/social-media.HTML')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('social-media').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading social media:', error));
+    </script>
+</body>
+
+</html>
